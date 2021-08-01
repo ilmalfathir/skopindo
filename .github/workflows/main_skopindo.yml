@@ -28,6 +28,11 @@ jobs:
       with:
         platform: python
         platform-version: '3.9'
+    - name: Virtual ENV
+      run: python3 -m venv Env
+    - name : Activate ENV
+      run: source Env/bin/activate
+      
     - name: Install Whitenoise
       run: pip install whitenoise
       
