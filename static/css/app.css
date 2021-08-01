@@ -31,7 +31,7 @@ a {
 }
 
 img {
-    max-width: 100%;
+    max-width: 1000%;
 }
 
 .main-color {
@@ -241,9 +241,7 @@ a.movie-item:hover {
 }
 
 .item-content-title {
-    font-size: 5rem;
-    line-height: 5rem;
-    font-weight: 900;
+    font-size: 2rem;
 }
 
 .movie-infos {
@@ -577,7 +575,7 @@ footer .content {
     }
 
     .item-content-title {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .hamburger-menu {
@@ -605,3 +603,5 @@ footer .content {
         left: 0;
     }
 }
+
+
