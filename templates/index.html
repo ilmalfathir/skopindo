@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
     <!-- OWL CAROUSEL -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static 'css/loader.css' %}">
     <!-- BOX ICONS -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <!-- APP CSS -->
@@ -22,6 +22,10 @@
 </head>
 
 <body>
+<div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+</div>
+<div class="loadingscreen">
     <!-- NAV -->
     <div class="nav-wrapper">
         <div class="container">
@@ -81,10 +85,9 @@
                                     <span>16+</span>
                                 </div>
                             </div>
-                            <div class="item-genre top-down delay-4">Genre :</div>
                             <div class="movie-info">| {{slider.genre1}}{{slider.genre2}}</div>
                             <div class="item-content-description top-down delay-4">
-                                <p>TEST</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sit, omnis facere a commodi eos modi facilis optio consectetur ut vero explicabo, ipsum consequuntur corporis quo, deserunt exercitationem molestias est!</p>
                             </div>
                             <div class="item-action top-down delay-6">
                                 <a href="#" class="btn btn-hover">
@@ -1070,8 +1073,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
     <!-- APP SCRIPT -->
     <script src="{% static 'js/app.js' %}"></script>
-    <script></script>
-
+</div>
+<script>
+    $(window).on('load',function(){
+        $(".loader-wrapper").fadeOut(1000);
+            $(".loadingscreen").fadeIn("slow");
+    });
+</script>
 </body>
 
 </html>
