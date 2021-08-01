@@ -29,8 +29,6 @@ jobs:
 
     - name: Install dependencies
       run: pip install -r requirements.txt
-    - name: Install Whitenoise
-      run: pip install whitenoise
     - name: add static
       run: python3 manage.py collectstatic
 
