@@ -28,6 +28,11 @@ jobs:
       with:
         platform: python
         platform-version: '3.9'
+    - name: Install Whitenoise
+      run: pip install whitenoise
+      
+    - name: Collect Static
+      run: python3 manage.py collectstatic
 
     - name: Run Azure webapp deploy action using publish profile credentials
       uses: azure/webapps-deploy@v2
